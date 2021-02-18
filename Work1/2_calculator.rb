@@ -15,6 +15,7 @@ while true
         break
     end
     num = text.to_f
+    ans += num
     puts "Считанное число: " + num.to_s
     puts "Значение суммы на настоящий момент: " + ans.to_s
 end    
