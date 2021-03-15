@@ -4,7 +4,7 @@ require_relative "str_to_num"
 def main
     if !ARGV.size or (ARGV.size == 1 and ARGV[0] == '--help')
         print "Приложение эмитирует игру на рынке. Передайте стартовый капитал и количество дней в качестве аргументов приложения.\n\n"
-        print "market_game.rb CAPITAL DAYS\n\n"
+        print "2_market_game.rb CAPITAL DAYS\n\n"
         print "CAPITAL - real number, >= 0"
         print "DAYS - integer, >= 0"
     elsif ARGV.size == 2
