@@ -32,6 +32,35 @@ class City
     sort_city
   end
 
+  def classes_in_school(school)
+    month = ['Январь', 'Февраль', 'Март', 'Апрель', 
+             'Май', 'Июнь', 'Июль', 'Август', 
+             'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+    classes = Hash.new([])
+    for s in school
+      num_class = ""
+      if s.class_number[0] == 1
+        num_class = " "
+      end
+      num_class += s.class_number.join("_")
+      full_name = [s.surname, s.name, s.middle_name].join(" ")
+      classes[num_class] = classes[num_class].push([full_name,
+                               month[s.date_of_birth.mon],
+                               s.date_of_birth.mday])
+    end
+    classes
+  end
+
+  def select_school(view, num)
+    school = []
+    for st in @students
+      if (st.educational_institution[0] == view) and (st.educational_institution[1] == num)
+        school.push(st)
+      end
+    end
+    classes_in_school(school)
+  end
+
   def upload_to_csv(path)
     csv = CSV.open(path, 'w')
     @students.each do |s|
