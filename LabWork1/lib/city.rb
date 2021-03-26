@@ -36,17 +36,23 @@ class City
     month = ['Январь', 'Февраль', 'Март', 'Апрель', 
              'Май', 'Июнь', 'Июль', 'Август', 
              'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
-    classes = Hash.new([])
+    classes = Hash.new()
     for s in school
       num_class = ""
-      if s.class_number[0] == 1
-        num_class = " "
+      if s.class_number[0].size == 1
+        num_class = "0"
       end
       num_class += s.class_number.join("_")
       full_name = [s.surname, s.name, s.middle_name].join(" ")
-      classes[num_class] = classes[num_class].push([full_name,
+      if classes.has_key?(num_class)
+        classes[num_class].push([full_name,
+                                 month[s.date_of_birth.mon],
+                                 s.date_of_birth.mday])
+      else
+        classes[num_class] = [[full_name,
                                month[s.date_of_birth.mon],
-                               s.date_of_birth.mday])
+                               s.date_of_birth.mday]]
+      end
     end
     classes
   end

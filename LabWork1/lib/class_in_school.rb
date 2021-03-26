@@ -12,6 +12,7 @@ class Class_in_school
     @students.each do |s|
       csv << s
     end
+    csv.close()
   end
 
 end
