@@ -35,9 +35,7 @@ class Menu
   end
 
   def all_contacts
-    @notebook.list_person.each do |c|
-      puts "#{c.name} #{c.surname} #{c.patronymic} #{c.mobile}"
-    end
+    @notebook.print_all_person
   end
 
   def view_one_contact
@@ -61,7 +59,7 @@ class Menu
 
   def del_person
     person = @prompt.select('Select action?', TextMenu.text_select_person(@notebook))
-    @notebook.list_person.delete(person)
+    @notebook.del_person(person)
   end
 
   def change_data
@@ -86,6 +84,6 @@ class Menu
   end
 
   def statistics
-    Statistics.new(@notebook.list_person).print_statistics
+    @notebook.print_statistics
   end
 end

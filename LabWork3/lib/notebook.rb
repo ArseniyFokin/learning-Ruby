@@ -7,7 +7,6 @@ require_relative 'statistics'
 
 # The class describes the notebook
 class Notebook
-  attr_reader :list_person
 
   def initialize
     @list_person = []
@@ -24,10 +23,6 @@ class Notebook
 
   def add_person(hash_person)
     @list_person.push(Person.new(hash_person))
-  end
-
-  def del_person(index)
-    @list_person.delete_at(index)
   end
 
   def change_mobile(index, mobile)
@@ -94,5 +89,25 @@ class Notebook
 
   def statistics
     Statistics.new(@list_person).print_statistics
+  end
+
+  def print_all_person
+    @list_person.each do |c|
+      puts "#{c.name} #{c.surname} #{c.patronymic} #{c.mobile}"
+    end
+  end
+
+  def del_person(person)
+    @list_person.delete(person)
+  end
+
+  def choice_person
+    choise = []
+    @list_person.each do |p|
+      full_name = "#{p.name} #{p.surname}"
+      full_name += " #{p.patronymic}" if !p.patronymic.nil?
+      choise.push({ name: full_name, value: p })
+    end
+    choise
   end
 end

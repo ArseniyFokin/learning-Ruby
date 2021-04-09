@@ -24,13 +24,7 @@ module TextMenu
   end
 
   def self.text_select_person(notebook)
-    choise = []
-    notebook.list_person.each do |p|
-      full_name = "#{p.name} #{p.surname}"
-      full_name += " #{p.patronymic}" if !p.patronymic.nil?
-      choise.push({ name: full_name, value: p })
-    end
-    choise
+    notebook.choice_person
   end
 
   def self.text_change_data
