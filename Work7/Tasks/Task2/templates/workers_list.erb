@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Сотрудники</title>
+    <meta name = "author" content="Arseniy Fokin">
+  </head>
+  <body>
+    <h1>Сотрудники компании</h1>
+    <ul>
+      <% @workers_list.each do |worker| %>
+        <li><%= worker.name + " " + worker.surname %> <a href= <%= worker.name + worker.surname + ".html" %> >>> ></a> </li>
+      <% end %>
+    </ul>
+  </body>
+</html>
