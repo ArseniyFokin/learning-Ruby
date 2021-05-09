@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" 
+      content="width=device-width, initial-scale=1.0" />
+    <title>Шаблон Zurb Foundation</title>
+    <link rel="stylesheet" href="assets/css/foundation.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Top Bar-->
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">Site Title</li>
+            <li>
+              <a href="#">One</a>
+              <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <ul class="menu">
+            <li><input type="search" placeholder="Search"></li>
+            <li><button type="button" class="button">Search</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--grid-container - для центровки всех объектов 
+          grid-container fluid - котейнер без отступов-->
+      <h1>Здравствуй, мир!</h1>
+
+      <div class="grid-x grid-padding-x">
+        <!--grid-margin-x - отступы от краёв
+            grid-padding-x - отступы от всех элементов-->
+        <div class="cell">full width cell</div>
+        <div class="cell">full width cell</div>
+        <div class="cell small-6">6 cells</div>
+        <div class="cell small-6">6 cells</div>
+        <div class="cell medium-6 large-4">12/6/4 cells</div>
+        <div class="cell medium-6 large-8">12/6/8 cells</div>
+        <div class="cell medium-4">4 cells</div>
+        <div class="cell medium-4">4 cells</div>
+        <div class="cell medium-4">4 cells</div>
+        <div class="cell medium-4">4 cells</div>
+        <div class="cell medium-4">4 cells</div>
+        <div class="cell medium-4 medium-offset-2">Offdet 2 on large</div>
+        <div class="cell medium-4">4 cells</div>
+        <!--small - для маленьких устройств (телефоны)
+            medium - планшеты
+            large - компьютеры-->
+      </div>
+
+      <div class="grid-x grid-padding-x"> <!-- Выравнивание ячеек по левой стороне -->
+        <div class="cell small-4">Aligned to</div>
+        <div class="cell small-4">the left</div>
+      </div>
+      <div class="grid-x grid-padding-x align-right"> <!-- Выравнивание ячеек по правой стороне -->
+        <div class="cell small-4">Aligned to</div>
+        <div class="cell small-4">the right</div>
+      </div>
+      <div class="grid-x grid-padding-x align-center"> <!-- Выравниваниеячеек  по центру -->
+        <div class="cell small-4">Aligned to</div>
+        <div class="cell small-4">the center</div>
+      </div>
+      <div class="grid-x grid-padding-x align-justify"> <!-- Выравнивание ячеек по бокам -->
+        <div class="cell small-4">Aligned to</div>
+        <div class="cell small-4">the edges</div>
+      </div>
+      <div class="grid-x grid-padding-x align-spaced"> <!-- Выравнивание ячеек по середине частей разбиения -->
+        <div class="cell small-4">Aligned to</div>
+        <div class="cell small-4">the space around</div>
+      </div>
+
+      <div class="grid-x grid-padding-x">
+        <div class="cell medium-6">
+          <div class="callout clearfix">
+            <a class="button float-left">Left</a>
+            <a class="button float-right">Right</a>
+            <p>Text</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-x grid-margin-x">
+        <div class="cell medium-3">
+          Навигационный столбец
+          <ul class="vertical menu">
+            <li><a href="#">One</a></li>
+            <li>
+              <a href="#">Two</a>
+              <ul class="nested vertical menu">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Three</a></li>
+          </ul>
+        </div>
+        <div class="cell medium-9">
+          Столбец с содержимым
+        </div>
+      </div>
+
+      <!-- Подназвание-->
+      <h3>Foundation for Sites <small>Version 6.6.1</small></h3>
+
+      <p>Красивые ссылки: <a href="global.html">Воть</a></p>
+
+      <!--Горизонтальная линия-->
+      <hr>
+
+      <!-- Ненумерованные списки -->
+      <ul>
+        <!-- class="no-bullet" - Без точек-->
+        <li>Без номера 1</li>
+        <li>Массив без номера
+          <ul>
+            <li>Элемент массива без номера 1</li>
+            <li>Элемент массива без номера 2</li>
+          </ul>
+        </li>
+        <li>Без номера 2</li>
+      </ul>
+
+      <!-- Нумерованные списки -->
+      <ol>
+        <!-- class="no-bullet" - Без цифр-->
+        <li>Элемент</li>
+        <li>Элемент
+          <ol>
+            <li>Элемент</li>
+          </ol>
+        </li>
+        <li>Элемент</li>
+      </ol>
+
+      <!-- Списки с терминами -->
+      <dl>
+        <dt>Арсений</dt>
+        <dd>русский парень</dd>
+        <dt>Максим</dt>
+        <dd>не русский парень</dd>
+      </dl>
+
+      <!---Цитаты -->
+      <blockquote>
+        Я русский
+        <cite>Арсений</cite>
+      </blockquote>
+
+      <!-- Местоположение текста-->
+      <p class="text-left">...</p>
+      <p class="text-right">...</p>
+      <p class="text-center">...</p> <!-- Центровка -->
+      <p class="text-justify">...</p> <!-- Растянут по ширине -->
+
+      <!-- Вводный параграф-->
+      <p class="lead">Кто я?</p>
+
+      <!-- Меню -->
+      <ul class="vertical menu">
+        <li><a href="#">One</a></li>
+        <li>
+          <a href="#">Two</a>
+          <ul class="nested vertical menu">
+            <li><a href="#">One</a></li>
+            <li><a href="#">Two</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Three</a></li>
+      </ul>
+
+      <!-- Выпадающие меню-->
+      <p>Выпадающее меню drilldown</p>
+      <ul class="vertical menu drilldown" data-drilldown>
+        <li><a href="#">One</a></li>
+        <li>
+          <a href="#">Two</a>
+          <ul class="menu vertical nested">
+            <li><a href="#">Two A</a></li>
+            <li><a href="#">Two B</a></li>
+            <li><a href="#">Two C</a></li>
+            <li><a href="#">Two D</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Three</a></li>
+        <li><a href="#">Four</a></li>
+      </ul>
+
+      <p>Выпадающее меню accordion</p>
+      <ul class="vertical menu accordion-menu" data-accordion-menu>
+        <li>
+          <a href="#">Item 1</a>
+          <ul class="menu vertical nested">
+            <li><a href="#">Item 1A</a></li>
+            <li><a href="#">Item 1B</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Item 2</a></li>
+      </ul>
+
+      <nav aria-label="Pagination">
+        <ul class="pagination">
+          <li class="pagination-previous disabled">Previous <span class="show-for-sr">page</span></li>
+          <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+          <li><a href="#" aria-label="Page 2">2</a></li>
+          <li><a href="#" aria-label="Page 3">3</a></li>
+          <li><a href="#" aria-label="Page 4">4</a></li>
+          <li class="ellipsis" aria-hidden="true"></li>
+          <li><a href="#" aria-label="Page 12">12</a></li>
+          <li><a href="#" aria-label="Page 13">13</a></li>
+          <li class="pagination-next"><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+        </ul>
+      </nav>
+
+      <!-- Anchors (links) -->
+      <a href="about.html" class="button">Learn More</a>
+      <a href="#features" class="button">View All Features</a>
+      <a href="about.html" class="success button">Learn More</a>
+      <a href="#features" class="alert button">View All Features</a>
+      <a class="button tiny" href="#">So Tiny</a>
+      <a class="button small" href="#">So Small</a>
+      <a class="button" href="#">So Basic</a>
+      <a class="button large" href="#">So Large</a>
+      <a class="button expanded" href="#">Such Expand</a>
+      <a class="button small expanded" href="#">Wow, Small Expand</a>
+
+      <a class="button primary" href="#">Primary</a>
+      <a class="button secondary" href="#">Secondary</a>
+      <a class="button success" href="#">Success</a>
+      <a class="button alert" href="#">Alert</a>
+      <a class="button warning" href="#">Warning</a>
+
+      <a class="button disabled" href="#" aria-disabled>Disabled</a>
+      <button type="button" class="button primary" disabled>Disabled</button>
+      <button type="button" class="button secondary" disabled>Disabled</button>
+      <button type="button" class="button success" disabled>Disabled</button>
+      <button type="button" class="button alert" disabled>Disabled</button>
+      <button type="button" class="button warning" disabled>Disabled</button>
+
+      <!--Группа кнопок-->
+      <div class="button-group">
+        <a class="button">One</a>
+        <a class="button">Two</a>
+        <a class="button">Three</a>
+      </div>
+
+      <!--Панель из кнопочек-->
+      <div class="primary button-group no-gaps">
+        <a class="button">Harder</a>
+        <a class="button">Better</a>
+        <a class="button">Faster</a>
+        <a class="button">Stronger</a>
+      </div>
+
+      <!--Кнопочки во всю ширину экрана-->
+      <div class="expanded button-group">
+        <a class="button">Expanded</a>
+        <a class="button">Button</a>
+        <a class="button">Group</a>
+      </div>
+
+      <!--Контейнеры-->
+
+      <!--Callout-->
+      <!--Рамочка вокруг элемента-->
+      <div class="callout">
+        <!--Цвета: callout secondary/primary/success/warning/alert-->
+        <!--Размер: callout small/medium/large-->
+        <h5>This is a callout.</h5>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        <a href="#">It's dangerous to go alone, take this.</a>
+      </div>
+
+      <!--Карточка-->
+      <div class="card" style="width: 300px;">
+        <div class="card-divider">
+          This is a header
+        </div>
+        <img src="assets/img/generic/rectangle-1.jpg">
+        <div class="card-section">
+          <h4>This is a card.</h4>
+          <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        </div>
+      </div>
+
+      <div class="grid-x grid-margin-x small-up-2 medium-up-3">
+        <div class="cell">
+          <div class="card">
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <h4>This is a row of cards.</h4>
+              <p>This row of cards is embedded in an Flex Block Grid.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="card">
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <h4>This is a card.</h4>
+              <p>It has an easy to override visual style, and is appropriately subdued.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="card">
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <h4>This is a card.</h4>
+              <p>It has an easy to override visual style, and is appropriately subdued.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cell">
+          <div class="card">
+            <img src="assets/img/generic/rectangle-1.jpg">
+            <div class="card-section">
+              <h4>This is a row of cards.</h4>
+              <p>This row of cards is embedded in an Flex Block Grid.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="media-object stack-for-small">
+        <div class="media-object-section">
+          <div class="thumbnail">
+            <img src= "assets/img/generic/rectangle-1.jpg">
+          </div>
+        </div>
+        <div class="media-object-section">
+          <h4>I Can Stack.</h4>
+          <p>Shrink the browser width to see me stack. I do tricks for dog treats, but I'm not a dog.</p>
+        </div>
+      </div>
+
+      <!--Таблицы-->
+      <table>
+        <thead>
+          <tr>
+            <th width="200">Table Header</th>
+            <th>Table Header</th>
+            <th width="150">Table Header</th>
+            <th width="150">Table Header</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Content Goes Here</td>
+            <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+            <td>Content Goes Here</td>
+            <td>Content Goes Here</td>
+          </tr>
+          <tr>
+            <td>Content Goes Here</td>
+            <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+            <td>Content Goes Here</td>
+            <td>Content Goes Here</td>
+          </tr>
+          <tr>
+            <td>Content Goes Here</td>
+            <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+            <td>Content Goes Here</td>
+            <td>Content Goes Here</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
