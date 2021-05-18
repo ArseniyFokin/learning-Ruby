@@ -3,13 +3,34 @@
     <h3>Список учебных заведений</h3>
   </div>
 
+  <div class="expanded button-group">
+    <a class="button" href="/instituties/type/school">Школы</a>
+    <a class="button" href="/instituties/type/lyceum">Лицеи</a>
+    <a class="button" href="/instituties/type/gymnasium">Гимназии</a>
+    <a class="button" href="/">Отмена</a>
+  </div>
+
+  <% unless @params[:filter].nil? %>
+    <div class="large-12 cell">
+      <div class="callout">
+        <p>Фильтр: <%= @params[:filter] %></p>
+      </div>
+    </div>
+  <% end %>
+
   <div class="large-12 cell">
     <div class="grid-x grid-padding-x">
-      <% @params.each do |institute| %>
-        <div class="large-12">
-          <a><%= institute %></a>
-        </div>
-      <% end %>
+      <table>
+        <tbody>
+          <% @params[:institutions].each do |institute| %>
+            <tr>
+              <td>
+                <a href="<%= "/institute/" + institute[:id].to_s %>"><%= institute[:type] + " №" + institute[:number].to_s %></a>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
