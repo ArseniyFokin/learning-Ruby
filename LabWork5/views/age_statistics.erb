@@ -1,0 +1,31 @@
+<div class="grid-x grid-margin-x">
+  <div class="cell large-12">
+    <h3>Статистика по возрасту</h3>
+  </div>
+
+  <div class="cell large-12">
+    <% form({method: :get}, {obj: @parameters}) do |f| %>
+      <div class="cell large-6">
+        <%= f.input(:age, type: :number, label: "Возраст", placeholder: 0) %>
+      </div>
+      <div class="large-6 cell">
+        <%= f.button(value: "Проверить", class: 'button', type: :submit) %>
+      </div>
+    <% end %>
+  </div>
+
+  <table class="cell large-12">
+    <tbody>
+      <% @statisctics.each do |key, value|%>
+        <tr>
+          <td>
+            <%= key %>
+          </td>
+          <td>
+            <%= value.nan? ? "-" : "%.2f"%value %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

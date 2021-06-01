@@ -1,0 +1,10 @@
+<div class="grid-x grid-margin-x">
+  <div class="cell large-12">
+    <h3>Найденные вакансии</h3>
+    <a class="button secondary" href="/labor_exchange/job_seekers/<%= @job_seeker.id %>">
+      Назад
+    </a>
+  </div>
+</div>
+
+<%= render('_search_job_list', locals: {back_location: "/labor_exchange/job_seekers/#{@job_seeker.id}/search_job/"}) %>

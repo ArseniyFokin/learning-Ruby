@@ -1,0 +1,24 @@
+<div class="grid-x grid-margin-x">
+  <div class="cell large-12">
+    <h3>Список должностей</h3>
+  </div>
+
+    <% if @positions.size == 0 %>
+      <div class="cell large-12 callout warning">
+        В данный момент должностей нету
+      </div>
+    <% else %>
+      <table class="cell large-12">
+        <tbody>
+          <% @positions.each_with_index do |position, index|%>
+            <tr>
+              <td>
+                <p><a href = "/labor_exchange/positions/<%= index + 1 %>"><%= position %></a></p>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+
+</div>

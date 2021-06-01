@@ -1,0 +1,7 @@
+<div class="grid-x grid-margin-x">
+  <div class="cell large-12 warning">
+    Вы действительно хотите удалить вакансию <%= @vacancy.company + " " + @vacancy.title %>?
+  </div>
+</div>
+
+<%= render('_delete_form', locals: {back_location: "/labor_exchange/vacancies/#{@vacancy.id}"}) %>

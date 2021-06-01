@@ -1,0 +1,42 @@
+<div class="grid-x grid-margin-x">
+  <div class="cell large-12">
+    <h3>Вакансии</h3>
+    <a href="/labor_exchange/vacancies/new" class="button">
+      Добавить
+    </a>
+  </div>
+
+  <div class="cell large-12">
+    <% form({method: :get}, {obj: @parameters}) do |f| %>
+      <div class="cell large-6">
+        <%= f.input(:filter, type: :text, label: "Фильтр", placeholder: "Профессия") %>
+      </div>
+      <div class="large-6 cell">
+        <%= f.button(value: "Фильтровать", class: 'button', type: :submit) %>
+      </div>
+    <% end %>
+  </div>
+
+  <% if @vacancies.size == 0 %>
+    <div class="cell large-12 callout warning">
+      В данный момент вакансий нету
+    </div>
+  <% else %>
+    <% @vacancies.each do |vacancy| %>
+      <div class="card cell large-3">
+        <div class="card-divider">
+          <%= vacancy.title %>
+        </div>
+        <div class="card-section" >
+          <p><%= vacancy.salary %> руб</p>
+          <p><%= vacancy.company%></p>
+          <p>
+            <a class="button" href="/labor_exchange/vacancies/<%= vacancy.id %>">
+              Информация о вакансии
+            </a>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

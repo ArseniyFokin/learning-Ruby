@@ -1,0 +1,19 @@
+<div class="grid-x grid-margin-x">
+  <div class="cell lare-12">
+    <h3>
+      Информация о должности <%= @statisctics[:title] %>
+    </h3>
+    <p>Количество предложений: <%= @statisctics[:count] %></p>
+    <p>Средний оклад: <%= @statisctics[:salary] %></p>
+    <p>Количество уникальных компаний: <%= @statisctics[:count_uniq_company] %></p>
+    <p>Требующееся образование в разных вакансих: </p>
+    <ul>
+      <% @statisctics[:education].each do |education|%>
+        <li><%= education %></li>
+      <% end %>
+    </ul>
+    <a class="button secondary" href="/labor_exchange/positions">
+      Назад
+    </a>
+  </div>
+</div>

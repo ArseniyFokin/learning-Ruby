@@ -1,0 +1,38 @@
+<div class="grid-x grid-margin-x">
+  <div class="cell lare-12">
+    <h3>
+      Информация о соискателе
+    </h3>
+    <a class="button secondary" href="/labor_exchange/job_seekers">
+      Назад
+    </a>
+    <p>Фамилия: <%= @job_seeker.surname %></p>
+    <p>Имя: <%= @job_seeker.name %></p>
+    <p>Отчество: <%= @job_seeker.patronymic %></p>
+    <p>Дата рождения: <%= @job_seeker.date_of_birth %></p>
+    <p>Образование: <%= @job_seeker.education %></p>
+    <p>Специальность: <%= @job_seeker.specialty %></p>
+    <p>Желаемая зарплата: <%= @job_seeker.desired_salary %></p>
+    <% unless @job_seeker.unwanted_companies.nil? and @job_seeker.unwanted_companies.empty? %>
+      <p>Нежелательные компании:</p>
+      <ul>
+        <% @job_seeker.unwanted_companies.each do |unwanted_company| %>
+          <li><%= unwanted_company %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <a class="button" href="/labor_exchange/job_seekers/<%= @job_seeker.id %>/edit">
+      Редактировать
+    </a>
+    <a class="button" href="/labor_exchange/job_seekers/<%= @job_seeker.id %>/search_job">
+      Найти работу
+    </a>
+    <a class="button" href="/labor_exchange/job_seekers/<%= @job_seeker.id %>/almost_search_job">
+      Найти почти работу мечты
+    </a>
+    <a class="button warning" href="/labor_exchange/job_seekers/<%= @job_seeker.id %>/delete">
+      Удалить
+    </a>
+  </div>
+</div>

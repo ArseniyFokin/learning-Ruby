@@ -1,0 +1,16 @@
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
+
+gem 'dry-schema'
+gem 'dry-validation'
+gem 'forme'
+gem 'puma'
+gem 'roda'
+gem 'tilt'
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+
+group :development do
+  gem 'rerun'
+  gem 'rubocop'
+end

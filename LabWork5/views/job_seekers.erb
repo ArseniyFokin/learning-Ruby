@@ -1,0 +1,37 @@
+<div class="grid-x grid-margin-x">
+  <div class="cell large-12">
+    <h3>Соискатели</h3>
+    <a href="/labor_exchange/job_seekers/new" class="button">
+      Добавить
+    </a>
+  </div>
+
+  <% if @job_seekers.size == 0 %>
+    <div class="cell large-12 callout warning">
+      В данный момент соискателей нету
+    </div>
+  <% else %>
+    <table class="cell large-12">
+      <tbody>
+        <thead>
+          <tr>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Отчество</th>
+            <th>Специальность</th>
+            <th>Дополнительно</th>
+          </tr>
+        </thead>
+        <% @job_seekers.each do |job_seeker| %>
+          <tr>
+            <td><%= job_seeker.surname %></td>
+            <td><%= job_seeker.name %></td>
+            <td><%= job_seeker.patronymic %></td>
+            <td><%= job_seeker.specialty %></td>
+            <td><a href="/labor_exchange/job_seekers/<%= job_seeker.id %>">Подробнее...</a></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+</div>

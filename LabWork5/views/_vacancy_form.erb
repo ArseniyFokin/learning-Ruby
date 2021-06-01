@@ -1,0 +1,33 @@
+<% form({method: :post}, {obj: @parameters}) do |f| %>
+  <div class="grid-x grid-margin-x">
+    <div class="large-12 cell">
+      <%= f.input(:company, type: :text, label: 'Компания', placeholder: "Тензор") %>
+    </div>
+    <div class="large-12 cell">
+      <%= f.input(:title, type: :text, label: "Название", placeholder: "Ruby программист") %>
+    </div>
+    <div class="large-12 cell">
+      <%= f.input(:department, type: :text, label: "Отдел", placeholder: "Разработка") %>
+    </div>
+    <div class="large-12 cell">
+      <%= f.input(:salary, type: :number, label: "Зарплата", placeholder: "25000") %>
+    </div>
+    <div class="large-12 cell">
+      <%= f.input(:age_interval, type: :text, label: "Возростной интервал", placeholder: "18-99") %>
+    </div>
+    <div class="large-12 cell">
+      <% if form_type.eql? "Изменить" %>
+        <%= f.input(:education, type: :select, label: "Образование", options: EducationType.all_types) %>
+      <% else %>
+        <%= f.input(:education, type: :select, label: "Образование", options: EducationType.all_types, add_blank: true) %>
+      <%end %>
+    </div>
+    <div class="large-12 cell">
+      <%= f.input(:count_vacancy, type: :number, label: "Количество вакансий", placeholder: "5") %>
+    </div>
+    <div class="large-12 cell">
+      <%= f.button(value: form_type, class: 'button') %>
+      <a href='<%= back_location%>' class="button secondary">Отмена</a>
+    </div>
+  </div>
+<% end %>

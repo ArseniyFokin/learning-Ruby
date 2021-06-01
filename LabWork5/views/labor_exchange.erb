@@ -1,0 +1,21 @@
+<div class="grid-x grid-margin-x">
+  <div class="cell large-12">
+    <h1 class="text-center">
+      Биржа труда
+    </h1>
+  </div>
+  <table class="cell large-12">
+    <tbody>
+      <% @statisctics.each do |key, value|%>
+        <tr>
+          <td>
+            <%= key %>
+          </td>
+          <td>
+            <%= value.to_s %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

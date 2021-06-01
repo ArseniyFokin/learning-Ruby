@@ -1,0 +1,24 @@
+<div class="grid-x grid-margin-x">
+  <% if @vacancies.size == 0 %>
+    <div class="cell large-12 callout warning">
+      В данный момент вакансий нету
+    </div>
+  <% else %>
+    <% @vacancies.each do |vacancy| %>
+      <div class="card cell large-3">
+        <div class="card-divider">
+          <%= vacancy.title %>
+        </div>
+        <div class="card-section" >
+          <p>Зерплата: <%= vacancy.salary %> руб</p>
+          <p>Компания: <%= vacancy.company %></p>
+          <p>Отдел: <%= vacancy.department %></p>
+          <p>Количество: <%= vacancy.count_vacancy %></p>
+          <a class="button" href="<%= back_location %><%= vacancy.id %>">
+            Выбрать
+          </a>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

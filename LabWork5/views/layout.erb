@@ -1,0 +1,29 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Биржа труда</title>
+    <link rel="stylesheet" href="/assets/css/foundation.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="top-bar">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li><a class="menu-text" href="/labor_exchange">Биржа труда</a></li>
+            <li><a href="/labor_exchange/vacancies">Вакансии</a></li>
+            <li><a href="/labor_exchange/job_seekers">Соискатели</a></li>
+            <li><a href="/labor_exchange/positions">Должности</a></li>
+            <li><a href="/labor_exchange/age_statistics">Статистика по возрасту</a></li>
+          </ul>
+      </div>
+    </div>
+    <div class="grid-container">
+      <%= yield %>
+    </div>
+    <script src="/assets/js/vendor.js"></script>
+    <script src="/assets/js/foundation.js"></script>
+  </body>
+</html>

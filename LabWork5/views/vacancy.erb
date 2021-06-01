@@ -1,0 +1,21 @@
+<div class="grid-x grid-margin-x">
+  <div class="cell lare-12">
+    <h3>
+      Информация о вакансии
+    </h3>
+    <p>Компания: <%= @vacancy.company %></p>
+    <p>Название должности: <%= @vacancy.title %></p>
+    <p>Отдел: <%= @vacancy.department %></p>
+    <p>Оклад: <%= @vacancy.salary %> рублей</p>
+    <p>Интервал возраста: <%= @vacancy.age_interval.begin.to_s + "-" + @vacancy.age_interval.end.to_s %></p>
+    <p>Образование: <%= @vacancy.education %></p>
+    <p>Количество: <%= @vacancy.count_vacancy %></p>
+
+    <a class="button" href="/labor_exchange/vacancies/<%= @vacancy.id %>/edit">
+      Редактировать
+    </a>
+    <a class="button warning" href="/labor_exchange/vacancies/<%= @vacancy.id %>/delete">
+      Удалить
+    </a>
+  </div>
+</div>
